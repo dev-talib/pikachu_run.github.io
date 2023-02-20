@@ -1,0 +1,105 @@
+
+  #game {
+    height: 100vh;
+    position: relative;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+
+  #game-ground{
+    position: absolute;
+    height: 20vh;
+    width: 100%;
+    bottom: 0px;
+    border-top: 2px solid black;
+  }
+
+  #score{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  #restart_btn{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+  }
+
+  #character{
+      width: fit-content;
+      position: absolute;
+      bottom: 20vh;
+      left: 20vh;
+  }
+
+  #character img{
+    height: 100px;
+  }
+
+  #bomb {
+    width: 90px;
+    height: 90px;
+    background-image: url(img/obsticle/bomb.png);
+    background-size: cover;
+    position: absolute;
+    left: 1800px;
+    bottom: 135px;
+    transform: translate(-50%,-50%);
+    animation: move_obsticle 1.5s infinite; 
+   
+  }
+  /* #bomb img{
+    height: 85px;
+  } */
+
+
+  .jump-animation {
+    animation: jump 0.5s infinite ;
+  }
+
+  .obstical-animation {
+    animation: move_obsticle 3s infinite;
+  }
+
+  @keyframes move_obsticle {
+      0%{right: 0px;} 
+      100%{left: -50px;}
+  }
+
+
+  @keyframes jump{
+      0%{bottom: 200px;}
+      25%{
+        bottom: 275px;
+        left: 22vh;
+      }
+      50%{
+        bottom: 350px;
+        left: 26vh;
+      }
+      75%{
+        bottom: 275px;
+        left: 22vh;
+      }
+      100%{
+        bottom: 200px;
+        left: 20vh;
+      }  
+  }   
+
+  /* @media only screen and (max-width: 1000px) {
+    #game {
+      height: 100vh;
+      margin: 0px;
+    }
+
+    #bomb {
+      bottom: 90px;
+    }
+  } */
